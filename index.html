@@ -1,0 +1,277 @@
+<!-- ... existing code ... -->
+      <!-- Custom SVG Astronomy Club Emblem (Beyondnjom × AASTRONOMY Club) -->
+      <div class="flex flex-col items-center justify-center mb-6">
+        <div class="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center mb-3">
+          <!-- GitHub Repo Logo (./logo.jpg) with Circular Golden Ring Framing -->
+          <div id="entryLogoImgWrap" class="w-full h-full rounded-full p-1 bg-gradient-to-tr from-lunar-500/70 via-telemetry-400/50 to-lunar-400/80 shadow-[0_0_28px_rgba(251,191,36,0.35)] flex items-center justify-center overflow-hidden">
+            <img
+              id="entryLogoImg"
+              src="./logo.jpg"
+              alt="Beyondnjom × AASTRONOMY Club Logo"
+              class="w-full h-full object-cover rounded-full bg-cosmos-950"
+            />
+          </div>
+
+          <!-- Fallback SVG Emblem (Shown automatically if ./logo.jpg is not found yet) -->
+          <svg id="entryLogoFallback" viewBox="0 0 160 160" class="hidden w-full h-full overflow-visible drop-shadow-[0_0_20px_rgba(251,191,36,0.3)]">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FDE68A" />
+                <stop offset="50%" stop-color="#FBBF24" />
+                <stop offset="100%" stop-color="#D97706" />
+              </linearGradient>
+              <linearGradient id="cyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0EA5E9" />
+                <stop offset="100%" stop-color="#38BDF8" />
+              </linearGradient>
+            </defs>
+
+            <!-- Outer Dotted Celestial Coordinate Ring -->
+            <circle cx="80" cy="80" r="72" fill="none" stroke="rgba(56,189,248,0.28)" stroke-width="1.2" stroke-dasharray="3 5" class="origin-center animate-spin-slow" />
+
+            <!-- Tilted Elliptical Orbit -->
+            <ellipse cx="80" cy="80" rx="68" ry="26" transform="rotate(-24 80 80)" fill="none" stroke="url(#cyanGrad)" stroke-width="1.8" opacity="0.85" />
+            <circle cx="141" cy="52" r="3.5" fill="#38BDF8" />
+
+            <!-- Crescent Moon Emblem -->
+            <path d="M 88 34 A 44 44 0 1 0 124 102 A 34 34 0 1 1 88 34 Z" fill="url(#goldGrad)" />
+
+            <!-- Stylized Refracting Telescope Silhouette inside Crescent -->
+            <g transform="translate(66, 66) rotate(-32)">
+              <rect x="0" y="6" width="38" height="7" rx="2" fill="#E2E8F0" />
+              <rect x="34" y="4.5" width="9" height="10" rx="1.5" fill="#38BDF8" />
+              <rect x="-7" y="7.5" width="8" height="4" rx="1" fill="#94A3B8" />
+              <!-- Tripod legs -->
+              <line x1="18" y1="13" x2="10" y2="28" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+              <line x1="18" y1="13" x2="26" y2="28" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
+            </g>
+
+            <!-- Four-point Sparkle Stars -->
+            <path d="M118 32 L120 38 L126 40 L120 42 L118 48 L116 42 L110 40 L116 38 Z" fill="#FDE68A" />
+            <circle cx="44" cy="46" r="2" fill="#38BDF8" />
+            <circle cx="114" cy="118" r="1.8" fill="#FBBF24" />
+          </svg>
+        </div>
+
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cosmos-800/80 border border-telemetry-400/30 text-[11px] sm:text-xs font-display tracking-widest uppercase text-telemetry-400">
+          <span>Beyondnjom</span>
+          <span class="text-lunar-500 font-bold">×</span>
+          <span>AASTRONOMY Club</span>
+        </div>
+
+        <!-- Subtle GitHub Asset Status / Local Preview Tester -->
+        <div id="logoRepoHint" class="hidden mt-2.5 flex flex-wrap items-center justify-center gap-2 text-[11px] text-slate-400">
+          <span>Using fallback emblem (add <code class="text-lunar-400 font-mono">logo.jpg</code> in repo root)</span>
+          <label for="localLogoTesterInput" class="text-telemetry-400 hover:text-telemetry-300 underline cursor-pointer">
+            Preview local file
+          </label>
+          <input id="localLogoTesterInput" type="file" accept="image/jpeg,image/png,image/webp" class="hidden" />
+        </div>
+      </div>
+
+      <!-- Entry Headline -->
+<!-- ... existing code ... -->
+      <!-- Animated Orbital Scanner SVG -->
+      <div class="relative w-28 h-28 mx-auto mb-6 flex items-center justify-center">
+        <svg viewBox="0 0 120 120" class="w-full h-full">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(56,189,248,0.2)" stroke-width="2" />
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="90 240" stroke-linecap="round" class="origin-center animate-spin" />
+          <circle cx="60" cy="60" r="38" fill="none" stroke="#FBBF24" stroke-width="1.8" stroke-dasharray="50 180" stroke-linecap="round" class="origin-center animate-spin-reverse-slow" />
+          <!-- Crosshair -->
+          <line x1="60" y1="18" x2="60" y2="30" stroke="#38BDF8" stroke-width="1.5" />
+          <line x1="60" y1="90" x2="60" y2="102" stroke="#38BDF8" stroke-width="1.5" />
+          <line x1="18" y1="60" x2="30" y2="60" stroke="#38BDF8" stroke-width="1.5" />
+          <line x1="90" y1="60" x2="102" y2="60" stroke="#38BDF8" stroke-width="1.5" />
+          <!-- Center Moon Core (Fallback when logo.jpg is absent) -->
+          <circle id="loadingCoreFallback" cx="60" cy="60" r="14" fill="#FBBF24" class="animate-pulse" />
+        </svg>
+        <!-- Center ./logo.jpg Badge inside Orbital Scanner -->
+        <div id="loadingLogoImgWrap" class="absolute w-14 h-14 rounded-full overflow-hidden border-2 border-lunar-400/80 shadow-[0_0_18px_rgba(251,191,36,0.5)] bg-cosmos-950 flex items-center justify-center">
+          <img
+            id="loadingLogoImg"
+            src="./logo.jpg"
+            alt="Club Logo"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+
+      <p class="text-xs font-mono uppercase tracking-widest text-telemetry-400 mb-1">
+<!-- ... existing code ... -->
+    <!-- Top Compact Navbar with Logo & Quick Actions -->
+    <header class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <!-- Mini Emblem (./logo.jpg with SVG fallback) -->
+        <div class="w-11 h-11 rounded-full bg-cosmos-800/80 border border-lunar-500/40 flex items-center justify-center shadow-lg overflow-hidden p-0.5">
+          <img
+            id="headerLogoImg"
+            src="./logo.jpg"
+            alt="Beyondnjom × AASTRONOMY Club"
+            class="w-full h-full object-cover rounded-full"
+          />
+          <svg id="headerLogoFallback" viewBox="0 0 40 40" class="hidden w-7 h-7">
+            <path d="M 22 7 A 13 13 0 1 0 33 27 A 10 10 0 1 1 22 7 Z" fill="#FBBF24" />
+            <ellipse cx="20" cy="20" rx="17" ry="6" transform="rotate(-24 20 20)" fill="none" stroke="#38BDF8" stroke-width="1.3" />
+          </svg>
+        </div>
+        <div>
+          <div class="font-display font-bold text-sm sm:text-base tracking-wide text-white flex items-center gap-1.5">
+<!-- ... existing code ... -->
+      // Application State
+      const state = {
+        userName: '',
+        warpSpeed: 0.4,
+        isWarping: false,
+        isTelescopeZoomed: false,
+        moonInitialized: false,
+        passId: 'LUNA-' + Math.floor(1000 + Math.random() * 9000),
+        logoSrc: './logo.jpg',
+        logoLoaded: false
+      };
+
+      // DOM References
+      const entryLogoImgWrap = document.getElementById('entryLogoImgWrap');
+      const entryLogoImg = document.getElementById('entryLogoImg');
+      const entryLogoFallback = document.getElementById('entryLogoFallback');
+      const logoRepoHint = document.getElementById('logoRepoHint');
+      const localLogoTesterInput = document.getElementById('localLogoTesterInput');
+
+      const loadingLogoImgWrap = document.getElementById('loadingLogoImgWrap');
+      const loadingLogoImg = document.getElementById('loadingLogoImg');
+      const loadingCoreFallback = document.getElementById('loadingCoreFallback');
+
+      const headerLogoImg = document.getElementById('headerLogoImg');
+      const headerLogoFallback = document.getElementById('headerLogoFallback');
+
+      const stageEntry = document.getElementById('stageEntry');
+      const stageLoading = document.getElementById('stageLoading');
+      const stageInvitation = document.getElementById('stageInvitation');
+// ... existing code ...
+      function showToast(msg) {
+        toastMessage.textContent = msg;
+        toastBanner.classList.remove('hidden');
+        toastBanner.classList.add('flex');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toastBanner.classList.add('hidden');
+          toastBanner.classList.remove('flex');
+        }, 3400);
+      }
+
+      // ===================================================================
+      // 0. GITHUB REPO LOGO LOADER (./logo.jpg) & GRACEFUL FALLBACK HANDLER
+      // ===================================================================
+      function applyLogoSource(src) {
+        state.logoSrc = src;
+        entryLogoImg.src = src;
+        loadingLogoImg.src = src;
+        headerLogoImg.src = src;
+      }
+
+      function setLogoVisibility(hasValidImage) {
+        state.logoLoaded = hasValidImage;
+        if (hasValidImage) {
+          entryLogoImgWrap.classList.remove('hidden');
+          entryLogoFallback.classList.add('hidden');
+          logoRepoHint.classList.add('hidden');
+
+          loadingLogoImgWrap.classList.remove('hidden');
+          loadingCoreFallback.classList.add('hidden');
+
+          headerLogoImg.classList.remove('hidden');
+          headerLogoFallback.classList.add('hidden');
+        } else {
+          entryLogoImgWrap.classList.add('hidden');
+          entryLogoFallback.classList.remove('hidden');
+          logoRepoHint.classList.remove('hidden');
+
+          loadingLogoImgWrap.classList.add('hidden');
+          loadingCoreFallback.classList.remove('hidden');
+
+          headerLogoImg.classList.add('hidden');
+          headerLogoFallback.classList.remove('hidden');
+        }
+      }
+
+      entryLogoImg.addEventListener('load', () => {
+        if (entryLogoImg.naturalWidth > 0) {
+          setLogoVisibility(true);
+        }
+      });
+
+      entryLogoImg.addEventListener('error', () => {
+        setLogoVisibility(false);
+      });
+
+      // Optional local file previewer so user can test logo.jpg before pushing to GitHub
+      if (localLogoTesterInput) {
+        localLogoTesterInput.addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            if (ev.target && ev.target.result) {
+              applyLogoSource(ev.target.result);
+              showToast('Previewing local logo! Remember to save it as logo.jpg in your GitHub repo.');
+            }
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // ===================================================================
+      // 1. COSMIC STARFIELD & WARP-SPEED ANIMATION CANVAS
+      // ===================================================================
+// ... existing code ...
+      // Generate & Download Custom VIP Pass Image via Canvas
+      btnDownloadPass.addEventListener('click', () => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = 900;
+          canvas.height = 460;
+          const ctx = canvas.getContext('2d');
+
+          // Deep Space Card Background
+          const bgGrad = ctx.createLinearGradient(0, 0, 900, 460);
+          bgGrad.addColorStop(0, '#050814');
+          bgGrad.addColorStop(0.5, '#0B1126');
+          bgGrad.addColorStop(1, '#1E1B4B');
+          ctx.fillStyle = bgGrad;
+          ctx.fillRect(0, 0, 900, 460);
+
+          // Gold Border
+          ctx.strokeStyle = '#FBBF24';
+          ctx.lineWidth = 4;
+          ctx.strokeRect(18, 18, 864, 424);
+
+          // Decorative Moon Circle on Right (or circular ./logo.jpg if loaded)
+          if (state.logoLoaded && entryLogoImg.complete && entryLogoImg.naturalWidth > 0) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(735, 195, 86, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(entryLogoImg, 735 - 86, 195 - 86, 172, 172);
+            ctx.restore();
+
+            ctx.strokeStyle = '#FBBF24';
+            ctx.lineWidth = 3.5;
+            ctx.beginPath();
+            ctx.arc(735, 195, 86, 0, Math.PI * 2);
+            ctx.stroke();
+          } else {
+            const moonGrad = ctx.createRadialGradient(730, 190, 15, 730, 190, 95);
+            moonGrad.addColorStop(0, '#FEF3C7');
+            moonGrad.addColorStop(0.7, '#FBBF24');
+            moonGrad.addColorStop(1, 'rgba(251, 191, 36, 0)');
+            ctx.fillStyle = moonGrad;
+            ctx.beginPath();
+            ctx.arc(730, 190, 95, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          // Text Header
+          ctx.fillStyle = '#38BDF8';
+          ctx.font = 'bold 18px sans-serif';
+          ctx.fillText('BEYONDNJOM × AASTRONOMY CLUB', 52, 68);
+// ... existing code ...
